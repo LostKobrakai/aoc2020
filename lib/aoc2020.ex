@@ -4,5 +4,5 @@ defmodule Aoc2020 do
   """
 
   defdelegate day1_part1(), to: Aoc2020.Day1
-  defdelegate day1_part2(), to: Aoc2020.Day1
+  defdelegate day1_part2(), to: Aoc2020.Day1, as: :day1_part2_optimized
 end

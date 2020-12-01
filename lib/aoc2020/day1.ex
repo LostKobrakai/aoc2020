@@ -18,10 +18,8 @@ defmodule Aoc2020.Day1 do
     list = load_report()
 
     try do
-      for x <- list, y <- list do
-        if x + y == @magic do
-          throw(x * y)
-        end
+      for x <- list, y <- list, x + y == @magic do
+        throw(x * y)
       end
 
       :error
@@ -45,11 +43,29 @@ defmodule Aoc2020.Day1 do
     list = load_report()
 
     try do
-      for x <- list, y <- list, z <- list do
-        if x + y + z == @magic do
-          throw(x * y * z)
-        end
+      for x <- list, y <- list, z <- list, x + y + z == @magic do
+        throw(x * y * z)
       end
+
+      :error
+    catch
+      num -> {:ok, num}
+    end
+  end
+
+  def day1_part2_optimized do
+    list = load_report()
+
+    try do
+      for x <- list,
+          rest = @magic - x,
+          y <- list,
+          y < rest,
+          rest = @magic - x - y,
+          z <- list,
+          z <= rest,
+          x + y + z == @magic,
+          do: throw(x * y * z)
 
       :error
     catch
