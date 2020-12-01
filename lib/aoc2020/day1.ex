@@ -1,5 +1,6 @@
 defmodule Aoc2020.Day1 do
   @magic 2020
+
   def day1_part1 do
     half = div(@magic, 2)
     list = load_report()
@@ -73,7 +74,8 @@ defmodule Aoc2020.Day1 do
     end
   end
 
-  defp load_report do
+  @doc false
+  def load_report do
     path = Application.app_dir(:aoc_2020, "priv/inputs/01/expense_report.txt")
 
     path
