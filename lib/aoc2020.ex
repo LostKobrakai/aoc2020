@@ -3,48 +3,6 @@ defmodule Aoc2020 do
   Documentation for `Aoc2020`.
   """
 
-  def day1_part1 do
-    magic = 2020
-    half = div(magic, 2)
-    list = load_report()
-
-    {lower, higher} = Enum.split_with(list, fn x -> x < half end)
-
-    Enum.reduce_while(lower, :error, fn num, :error ->
-      case Enum.find(higher, fn x -> x + num == magic end) do
-        nil -> {:cont, :error}
-        x -> {:halt, {:ok, num * x}}
-      end
-    end)
-  end
-
-  def day1_part2 do
-    magic = 2020
-    list = load_report()
-
-    try do
-      for x <- list, y <- list, z <- list do
-        if x + y + z == magic do
-          throw(x * y * z)
-        end
-      end
-
-      :error
-    catch
-      num -> {:ok, num}
-    end
-  end
-
-  defp load_report do
-    path = Application.app_dir(:aoc_2020, "priv/inputs/01/expense_report.txt")
-
-    path
-    |> File.stream!()
-    |> Stream.map(fn line ->
-      line
-      |> String.trim()
-      |> String.to_integer()
-    end)
-    |> Enum.to_list()
-  end
+  defdelegate day1_part1(), to: Aoc2020.Day1
+  defdelegate day1_part2(), to: Aoc2020.Day1
 end

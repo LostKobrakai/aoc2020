@@ -1,5 +1,5 @@
 defmodule Aoc2020Test do
-  use ExUnit.Case
+  use ExUnit.Case, async: true
   doctest Aoc2020
 
   describe "Day 1: Report Repair - Part 1" do
