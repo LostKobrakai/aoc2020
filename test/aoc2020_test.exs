@@ -13,4 +13,16 @@ defmodule Aoc2020Test do
       assert {:ok, 214_486_272} = Aoc2020.day1_part2()
     end
   end
+
+  describe "Day 2: Password Philosophy - Part 1" do
+    test "invalid password count" do
+      assert 416 = Aoc2020.day2_part1()
+    end
+  end
+
+  describe "Day 2: Password Philosophy - Part 2" do
+    test "invalid password count" do
+      assert 688 = Aoc2020.day2_part2()
+    end
+  end
 end
