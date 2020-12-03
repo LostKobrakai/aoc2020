@@ -8,4 +8,8 @@ defmodule Aoc2020 do
 
   defdelegate day2_part1(), to: Aoc2020.Day2, as: :part1
   defdelegate day2_part2(), to: Aoc2020.Day2, as: :part2
+
+  defdelegate day3_part1(), to: Aoc2020.Day3, as: :part1
+
+  defdelegate day3_part2(), to: Aoc2020.Day3, as: :part2
 end

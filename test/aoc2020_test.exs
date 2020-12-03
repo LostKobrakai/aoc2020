@@ -25,4 +25,16 @@ defmodule Aoc2020Test do
       assert 688 = Aoc2020.day2_part2()
     end
   end
+
+  describe "Day 3: Toboggan Trajectory - Part 1" do
+    test "tree count on path" do
+      assert 169 = Aoc2020.day3_part1()
+    end
+  end
+
+  describe "Day 3: Toboggan Trajectory - Part 2" do
+    test "invalid password count" do
+      assert 7_560_370_818 = Aoc2020.day3_part2()
+    end
+  end
 end
