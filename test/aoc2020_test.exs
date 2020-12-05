@@ -49,4 +49,16 @@ defmodule Aoc2020Test do
       assert 133 = Aoc2020.day4_part2()
     end
   end
+
+  describe "Day 5: Binary Boarding - Part 1" do
+    test "tree count on path" do
+      assert 826 = Aoc2020.day5_part1()
+    end
+  end
+
+  describe "Day 5: Binary Boarding - Part 2" do
+    test "invalid password count" do
+      assert 678 = Aoc2020.day5_part2()
+    end
+  end
 end
