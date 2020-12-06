@@ -61,4 +61,16 @@ defmodule Aoc2020Test do
       assert 678 = Aoc2020.day5_part2()
     end
   end
+
+  describe "Day 6: Custom Customs - Part 1" do
+    test "tree count on path" do
+      assert 6778 = Aoc2020.day6_part1()
+    end
+  end
+
+  describe "Day 6: Custom Customs - Part 2" do
+    test "invalid password count" do
+      assert 3406 = Aoc2020.day6_part2()
+    end
+  end
 end
