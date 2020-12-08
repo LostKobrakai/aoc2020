@@ -76,13 +76,25 @@ defmodule Aoc2020Test do
 
   describe "Day 7: Handy Haversacks - Part 1" do
     test "tree count on path" do
-      assert 6778 = Aoc2020.day7_part1()
+      assert 242 = Aoc2020.day7_part1()
     end
   end
 
   describe "Day 7: Handy Haversacks - Part 2" do
     test "invalid password count" do
       assert 176_035 = Aoc2020.day7_part2()
+    end
+  end
+
+  describe "Day 8: Handheld Halting - Part 1" do
+    test "tree count on path" do
+      assert 1753 = Aoc2020.day8_part1()
+    end
+  end
+
+  describe "Day 8: Handheld Halting - Part 2" do
+    test "invalid password count" do
+      assert 733 = Aoc2020.day8_part2()
     end
   end
 end
