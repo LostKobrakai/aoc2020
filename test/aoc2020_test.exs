@@ -97,4 +97,16 @@ defmodule Aoc2020Test do
       assert 733 = Aoc2020.day8_part2()
     end
   end
+
+  describe "Day 9: Encoding Error - Part 1" do
+    test "tree count on path" do
+      assert 105_950_735 = Aoc2020.day9_part1()
+    end
+  end
+
+  describe "Day 9: Encoding Error - Part 2" do
+    test "invalid password count" do
+      assert 13_826_915 = Aoc2020.day9_part2()
+    end
+  end
 end
