@@ -51,6 +51,42 @@ defmodule Aoc2020.Day9 do
 
   defp after_fun(acc), do: {:cont, acc}
 
+  def part2_queue() do
+    input = load_input()
+    part2_queue(input, part1(input))
+  end
+
+  def part2_queue(input, search) do
+    list =
+      input
+      |> Stream.chunk_while(:queue.new(), chunk_fun_queue(search), &after_fun/1)
+      |> Enum.at(0)
+
+    Enum.min(list) + Enum.max(list)
+  end
+
+  defp chunk_fun_queue(total) do
+    fn element, acc ->
+      with_element = :queue.in(element, acc)
+      check_sum_queue(with_element, total)
+    end
+  end
+
+  defp check_sum_queue(with_element, total) do
+    case with_element |> :queue.to_list() |> Enum.sum() do
+      ^total ->
+        {_, rest} = :queue.out(with_element)
+        {:cont, with_element |> :queue.to_list(), rest}
+
+      t when t < total ->
+        {:cont, with_element}
+
+      t when t > total ->
+        {_, rest} = :queue.out(with_element)
+        check_sum_queue(rest, total)
+    end
+  end
+
   @doc false
   def load_input do
     path = Application.app_dir(:aoc_2020, "priv/inputs/09/stream.txt")
