@@ -109,4 +109,16 @@ defmodule Aoc2020Test do
       assert 13_826_915 = Aoc2020.day9_part2()
     end
   end
+
+  describe "Day 10: Adapter Array - Part 1" do
+    test "tree count on path" do
+      assert 2046 = Aoc2020.day10_part1()
+    end
+  end
+
+  describe "Day 10: Adapter Array - Part 2" do
+    test "invalid password count" do
+      assert 1_157_018_619_904 = Aoc2020.day10_part2()
+    end
+  end
 end
