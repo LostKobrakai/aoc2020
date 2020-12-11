@@ -121,4 +121,16 @@ defmodule Aoc2020Test do
       assert 1_157_018_619_904 = Aoc2020.day10_part2()
     end
   end
+
+  describe "Day 11: Seating System - Part 1" do
+    test "tree count on path" do
+      assert 2310 = Aoc2020.day11_part1()
+    end
+  end
+
+  describe "Day 11: Seating System - Part 2" do
+    test "invalid password count" do
+      assert 2074 = Aoc2020.day11_part2()
+    end
+  end
 end
