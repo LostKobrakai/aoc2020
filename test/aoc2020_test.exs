@@ -97,4 +97,12 @@ defmodule Aoc2020Test do
   test "Day 12: Rain Risk - Part 2" do
     assert 62434 = Aoc2020.day12_part2()
   end
+
+  test "Day 13: Shuttle Search - Part 1" do
+    assert 3246 = Aoc2020.day13_part1()
+  end
+
+  test "Day 13: Shuttle Search - Part 2" do
+    assert 1_010_182_346_291_467 = Aoc2020.day13_part2()
+  end
 end
