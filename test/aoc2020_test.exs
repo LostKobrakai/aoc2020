@@ -133,4 +133,16 @@ defmodule Aoc2020Test do
       assert 2074 = Aoc2020.day11_part2()
     end
   end
+
+  describe "Day 12: Rain Risk - Part 1" do
+    test "tree count on path" do
+      assert 1319 = Aoc2020.day12_part1()
+    end
+  end
+
+  describe "Day 12: Rain Risk - Part 2" do
+    test "invalid password count" do
+      assert 62434 = Aoc2020.day12_part2()
+    end
+  end
 end
