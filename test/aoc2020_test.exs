@@ -105,4 +105,12 @@ defmodule Aoc2020Test do
   test "Day 13: Shuttle Search - Part 2" do
     assert 1_010_182_346_291_467 = Aoc2020.day13_part2()
   end
+
+  test "Day 14: Docking Data - Part 1" do
+    assert 7_477_696_999_511 = Aoc2020.day14_part1()
+  end
+
+  test "Day 14: Docking Data - Part 2" do
+    assert 3_687_727_854_171 = Aoc2020.day14_part2()
+  end
 end
