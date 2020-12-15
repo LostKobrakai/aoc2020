@@ -1,4 +1,4 @@
-defmodule Aoc2020.Day4Test do
+defmodule Aoc2020.Day14Test do
   use ExUnit.Case, async: true
   require Logger
 
