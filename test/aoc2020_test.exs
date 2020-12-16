@@ -121,4 +121,12 @@ defmodule Aoc2020Test do
   test "Day 15: Rambunctious Recitation - Part 2" do
     assert 18234 = Aoc2020.day15_part2()
   end
+
+  test "Day 16: Ticket Translation - Part 1" do
+    assert 24110 = Aoc2020.day16_part1()
+  end
+
+  test "Day 16: Ticket Translation - Part 2" do
+    assert 6_766_503_490_793 = Aoc2020.day16_part2()
+  end
 end

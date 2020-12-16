@@ -21,6 +21,7 @@ defmodule Aoc2020.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
+      {:nimble_parsec, "~> 1.0"},
       {:benchee, "~> 1.0", only: :dev}
     ]
   end
