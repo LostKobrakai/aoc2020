@@ -161,13 +161,11 @@ defmodule Aoc2020.Day16 do
           end)
           |> Enum.sort_by(fn {_, indexes} -> length(indexes) end, :asc)
           |> Enum.map_reduce([], fn {name, indexes}, acc ->
-            IO.inspect({indexes, acc})
             [last] = indexes -- acc
             {{name, last}, [last | acc]}
           end)
           |> elem(0)
           |> Map.new()
-          |> IO.inspect()
 
         for {<<"departure", _::binary>>, index} <- indexes, reduce: 1 do
           acc ->
