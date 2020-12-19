@@ -129,4 +129,12 @@ defmodule Aoc2020Test do
   test "Day 16: Ticket Translation - Part 2" do
     assert 6_766_503_490_793 = Aoc2020.day16_part2()
   end
+
+  test "Day 17: Conway Cubes - Part 1" do
+    assert 293 = Aoc2020.day17_part1()
+  end
+
+  test "Day 17: Conway Cubes - Part 2" do
+    assert 1816 = Aoc2020.day17_part2()
+  end
 end
