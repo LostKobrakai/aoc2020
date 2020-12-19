@@ -12,7 +12,7 @@ defmodule Aoc2020.Day17Test do
       """
 
       game = Aoc2020.Day17.Game.new(input)
-      [cycle_1, cycle_2, cycle_3] = Enum.take(game, 3)
+      [cycle_1, cycle_2, _cycle_3] = Enum.take(game, 3)
 
       assert """
              #..
@@ -93,7 +93,7 @@ defmodule Aoc2020.Day17Test do
       """
 
       game = Aoc2020.Day17.Game4D.new(input)
-      [cycle_1, cycle_2, cycle_3] = Enum.take(game, 3)
+      [cycle_1, _cycle_2, _cycle_3] = Enum.take(game, 3)
 
       assert """
              #..
